@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+// ISSUE https://github.com/grpc/grpc-dart/issues/560
+
+package core;
+
+option go_package = "name.alenkov.samples/go-and-flutter-grpc/public-api/core";
+
+message Empty {}

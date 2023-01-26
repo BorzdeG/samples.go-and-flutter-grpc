@@ -1,0 +1,5 @@
+= An example of how a Flutter app interacts with Go services via gRPC
+
+. Moving code generation to a separate directory (repository) for gRPC
+. Sending a JWT token
+. Detailing the error in the response from the server via WithDetails

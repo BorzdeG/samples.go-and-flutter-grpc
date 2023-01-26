@@ -1,0 +1,25 @@
+.DS_Store
+tmp.*
+
+.env
+.env.*
+!.env.example
+
+.firebase.json
+
+# Go
+go.work
+go.work.sum
+bin/
+pb/*
+report.xml
+
+# JetBrains
+.idea/*
+!.idea/vcs.xml
+!.idea/protobuf.xml
+!.idea/externalDependencies.xml
+!.idea/git_toolbox_prj.xml
+!.idea/misc.xml
+!.idea/sqldialects.xml
+!.idea/dataSources.xml

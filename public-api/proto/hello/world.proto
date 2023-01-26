@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package hello;
+
+import "core/empty.proto";
+
+option go_package = "name.alenkov.samples/go-and-flutter-grpc/public-api/hello";
+
+service HelloWorldService {
+	rpc MyName (core.Empty) returns (MyNameResponse);
+}
+
+message MyNameResponse {
+	string auth_name = 1;
+}
+
+enum FailPrecondition {
+	FAIL_PRECONDITION_UNSPECIFIED = 0;
+	FAIL_PRECONDITION_NAME = 1;
+}
