@@ -45,23 +45,19 @@ func (receiver *HelloWorldService) MyName(ctx context.Context, _ *publicApiCore.
 
 		s := status.New(codes.FailedPrecondition, "require name")
 
-		pf := &errdetails.PreconditionFailure{}
-		pf.Violations = append(
-			pf.Violations,
-			&errdetails.PreconditionFailure_Violation{
-				Type:    publicApiHello.FailPrecondition_FAIL_PRECONDITION_NAME.String(),
-				Subject: "Name is empty",
+		withDetails, err := s.WithDetails(
+			&errdetails.PreconditionFailure{
+				Violations: []*errdetails.PreconditionFailure_Violation{
+					{
+						Type:    publicApiHello.FailPrecondition_FAIL_PRECONDITION_NAME.String(),
+						Subject: "Name is empty",
+					},
+				},
 			},
 		)
-
-		withDetails, err := s.WithDetails(pf)
 		if err != nil {
 			log.Panic(err)
 		}
-
-		log.Printf("withDetails: %s", withDetails.String())
-		log.Printf("withDetails: %s", withDetails.Details())
-		log.Println(fmt.Errorf("withDetails: %w", withDetails.Err()))
 
 		return nil, withDetails.Err()
 	}
