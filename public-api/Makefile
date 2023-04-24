@@ -8,7 +8,8 @@ PROTO_FILES := $(shell find ./proto -type f -name '*.proto' | sed 's|^./proto/||
 all-gen: go-gen dart-gen
 
 go-clean:
-	find go ! -name go.mod ! -name go.sum -delete 2>/dev/null || exit 0
+	find go ! -name go.mod ! -name go.sum -delete 2>/dev/null || ::
+	rm go.mod 2>/dev/null || ::
 
 install-core:
 	go mod init test

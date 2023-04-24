@@ -8,7 +8,6 @@ tmp.*
 .firebase.json
 
 # Go
-go.work
 go.work.sum
 bin/
 pb/*
