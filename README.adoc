@@ -3,3 +3,9 @@
 . Moving code generation to a separate directory (repository) for gRPC
 . Sending a JWT token
 . Detailing the error in the response from the server via WithDetails
+
+== Various problems
+
+. grpc-web [WithDetails] : https://github.com/grpc/grpc-web/issues/399
+. grpc-web [Client Streaming] : https://github.com/grpc/grpc-web/issues/1205
+. grpc-web [CORS] : [.line-through]#https://github.com/grpc/grpc-web/issues/706#

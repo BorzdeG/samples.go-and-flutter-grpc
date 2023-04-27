@@ -1,12 +1,6 @@
 .DS_Store
 tmp.*
 
-.env
-.env.*
-!.env.example
-
-.firebase.json
-
 # Go
 go.work
 go.work.sum
