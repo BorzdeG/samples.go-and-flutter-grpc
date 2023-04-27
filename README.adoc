@@ -8,4 +8,4 @@
 
 . grpc-web [WithDetails] : https://github.com/grpc/grpc-web/issues/399
 . grpc-web [Client Streaming] : https://github.com/grpc/grpc-web/issues/1205
-. grpc-web [CORS] : [.line-through]#https://github.com/grpc/grpc-web/issues/706#
+. grpc-web [CORS] : +++<del>+++https://github.com/grpc/grpc-web/issues/706+++</del>+++
